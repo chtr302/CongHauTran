@@ -1,0 +1,31 @@
+{% extends "html/index.html" %}
+{% load static %}
+{% block project_python %}
+<link rel="stylesheet" href="{% static 'app/css/project.css' %}">
+<body id="project-page">
+    <section class="container">
+        <div class="arrow-icon left">
+            <a href="{% url 'resum' %}" class="transition">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="reactangle-pr">
+            {% for project in projects %}
+            <div class="card">
+                <div class="card-image"><img src="{{project.image_project.url}}"></div>
+                <div class="card-body">
+                    <p class="card-title" >{{project.title_project}}</p>
+                    <p class="card-des">{{project.sum_description_project}}</p>
+                    <button type="button" onclick="location.href='{% url 'project_detail' project_slug=project.slug %}'">View</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="arrow-icon right">
+            <a href="{% url 'contact' %}" class="transition">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+</body>
+{% endblock project_python %}

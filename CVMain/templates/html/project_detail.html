@@ -1,0 +1,87 @@
+{% extends "html/index.html" %}
+{% load static %}
+{% block detail %}
+<link rel="stylesheet" href="{% static 'app/css/detail.css' %}">
+<body id="detail-page">
+    <section class="container">
+        <div class="reactangle-dt">
+            <div class="title">
+                <h2>{{project.title_project}}</h2>
+            </div>
+            <div class="day">
+                {% if project.front is not None%}
+                <h5> Front-End: {{project.front}}</h5>
+                {% endif %}
+                {% if project.back is not None%}
+                <h5> Back-End: {{project.back}}</h5>
+                {% endif %}
+                <h5> Day Start: {{project.start|date:"d - M - Y"}}</h5>
+                <h5> Day End: {{project.end|date:"d - M - Y"}}</h5>
+            </div>
+            <h3>Team Member: <a>{{project.team_member}}</a></h3>
+            <div class="main">
+                <div class="img-right">
+                    <p>{{project.description_project_1}}</p>
+                    <img src="{{project.img_1.url}}">
+                </div>
+                <hr>
+                <div class="img-left">
+                    <img src="{{project.img_2.url}}">
+                    <p>{{project.description_project_2}}</p>
+                </div>
+                {% if project.description_project_3 %}
+                <hr>
+                {% endif %}
+                <div class="img-right">
+                    <p>{{project.description_project_3}}</p>
+                    {% if project.img_3 %}
+                    <img src="{{project.img_3.url}}">
+                    {% endif %}
+                </div>
+                {% if project.img_4 %}
+                <hr>
+                {% endif %}
+                <div class="img-left">
+                    {% if project.img_4 %}
+                    <img src="{{project.img_4.url}}">
+                    {% endif %}
+                    <p>{{project.description_project_4}}</p>
+                </div>
+                <button class="cssbuttons-io" onclick="window.open('{{project.link_project}}', '_blank')">
+                    <span>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z" fill="currentColor"></path>
+                        </svg>
+                        Code
+                    </span>
+                </button>
+            </div>
+            <hr>
+            <div class="comment-section">
+                <form method="POST" id="commentForm">
+                    {% csrf_token %}
+                    <label for="comment"><h3>Add comment:</h3></label><br>
+                    <textarea id="comment_name" name="comment_name" rows="1" cols="50" placeholder="Name"></textarea><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Enter your comment here..."></textarea><br>
+                    <input type="submit" value="Submit">
+                    <div id="formMessage"></div>
+                </form>
+                <div class="comment-dt">
+                    <h3>Comment:</h3>
+                    {%for comment in comments%}
+                    <div class="comment">
+                        <h4>{{comment.name}}</h4>
+                        <p>{{comment.comment}}</p>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </section>
+    <script src="{% static 'app/js/detail.js' %}"></script>
+</body>
+{% endblock detail %}

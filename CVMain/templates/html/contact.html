@@ -1,0 +1,43 @@
+{% extends "html/index.html" %}
+{% load static %}
+{% block contact %}
+<link rel="stylesheet" href="{% static 'app/css/contact/contact.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/contact/annimation.css' %}">
+<body id="contact-page">
+    <div class="react_ct">
+        <div class="grid-1"><img src="{% static 'img/contact.jpg' %}"></div>
+        <div class="grid-2">
+            <h1>Contact with me</h1>
+            <form method="POST" id="contactForm">
+                {% csrf_token %}
+                <div class='input_name'>
+                    <input type="text" id="name" name="name" required="" autocomplete="off">
+                    <label for="name">Name</label>
+                </div>
+                <div class='input_email'>
+                    <input type="text" id="email" name="email" required="" autocomplete="off">
+                    <label for="email">Email</label>
+                </div>
+                <div class='input_message'>
+                    <textarea id="message" name="message" required=""></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <div id="formMessage" class="form-message"></div>
+                <button type="submit">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Send Message</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'app/js/contact.js' %}"></script>
+</body>
+{% endblock contact %}
+

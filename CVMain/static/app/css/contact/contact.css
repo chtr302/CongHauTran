@@ -1,0 +1,239 @@
+body {
+    background: linear-gradient(to right, #ffe6b6, #1974d3);
+    height: auto;
+}
+#contact-page .container {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+}
+.container .arrow-icon.left {
+    position: absolute;
+    left: -40px; 
+    bottom: 50%;
+    font-size: 2em;
+}
+.container .arrow-icon .transition {
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.411);
+}
+.container .arrow-icon .transition:hover {
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.react_ct {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 4px 4px 10px #66778b;
+    overflow: hidden;
+}
+.grid-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+h1 {
+    font-size: 28px;
+    color: #274c77;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.input_name {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em auto;
+    max-width: 350px;
+    position: relative;
+    display: block;
+    margin-top: 30px;
+}
+.input_name input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+}
+.input_name label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #274c77;
+}
+.input_name :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: white;
+}
+  
+.input_name :is(input:focus, input:valid) {
+    border-color: #3d8db3;
+}
+.input_email {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em auto;
+    max-width: 350px;
+    position: relative;
+    display: block;
+}
+.input_email input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+}
+.input_email label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #274c77;
+}
+.input_email :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: white;
+}
+  
+.input_email :is(input:focus, input:valid) {
+    border-color: #3d8db3;
+}
+.input_message {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em auto;
+    max-width: 350px;
+    position: relative;
+    display: block;
+}
+.input_message textarea {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+    height: 100px;
+}
+.input_message label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: #274c77;
+}
+.input_message :is(textarea:focus, textarea:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: white;
+}
+  
+.input_message :is(textarea:focus, textarea:valid) {
+    border-color: #3d8db3;
+}
+button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to left, #ffe6b6, #1974d3);;
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    margin-left: 50px;
+    width: 250px;
+}
+  
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+  
+button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+  
+button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+  
+button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+button:hover svg {
+    transform: rotate(45deg);
+}
+#formMessage {
+    display: none;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    margin-left: 50px;
+}
+
+#formMessage.form-message-error {
+    background-color: rgb(219, 139, 139);
+}
+
+#formMessage.form-message-success {
+    background-color: rgb(140, 209, 140);
+}

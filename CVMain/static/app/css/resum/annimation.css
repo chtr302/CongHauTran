@@ -1,0 +1,76 @@
+#resum .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.container .arrow-icon.right {
+    position: absolute;
+    right: -40px;
+    bottom: 50%;
+    font-size: 2em;
+}
+.container .arrow-icon.left {
+    position: absolute;
+    left: -40px;
+    bottom: 50%;
+    font-size: 2em;
+}
+.container .arrow-icon .transition {
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.411);
+}
+.container .arrow-icon .transition:hover {
+    transition: 0.5s;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.grid-1.animate-in {
+    animation: slideInLeft 3s;
+}
+
+.grid-2.animate-in {
+    animation: slideInUp 3s;
+}
+
+.grid-3.animate-in {
+    animation: slideInRight 3s;
+}
+.no-pointer-events {
+    pointer-events: none;
+}
+.my-button {
+    pointer-events: auto;
+}

@@ -1,0 +1,65 @@
+.reactangle-rs .grid-2 {
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+    width: 260px;
+    height: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+    margin-top: 40px;
+}
+.grid-2:hover {
+    background-color: #274c7770;
+    color:  white;
+    height: 380px;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.grid-2 h2 {
+    padding: 3px 10px;
+    font-size: 16px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+}
+.grid-2 h5 {
+    padding: 3px 10px;
+    font-size: 16px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+}
+.grid-2 .blob {
+    height: 30px;
+    width: 75%;
+    border-radius: 0 0 30px 30px;
+    margin: 0 auto;
+    background-color: #274c77;
+    box-shadow: 0 0 10px 1px #274c77;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.grid-2:hover .blob {
+    height: 0;
+}
+.grid-2:hover .blob a {
+    opacity: 0;
+    position: absolute;
+    transition: all 0s;
+}
+.grid-2 .img {
+    display: inline-block;
+    margin: 30px auto 10px auto;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 10px 0px #bc211d;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.grid-2 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

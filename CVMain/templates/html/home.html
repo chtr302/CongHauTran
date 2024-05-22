@@ -1,0 +1,32 @@
+{% extends "html/index.html" %}
+{% load static %}
+{% block aboutme %}
+<link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+<body id="home-page">
+    <section class="container">
+        <div class="reactangle animate__backOutDown">
+            <div class="profile">
+                <img src="{% static 'img/hau.png' %}">
+                <h3>Trần Công Hậu</h3>
+            </div>
+            <div class="des-home">
+                <h2>
+                    <img src="{% static 'img/wave.png' %}" id="image-icon">
+                    Hello
+                </h2>
+                <h3>Welcome to my website.<br>I'm Trần Công Hậu.</h3>
+                <button type="button" onclick="location.href={% url "resum" %}">Resum</button>
+                <button type="button" onclick="location.href={% url 'project' %}">Project</button>
+                <p>I'm a Artificial Intelligence student at Posts and Telecommunications Institute of Technology. I'm passionate about technology and always eager to learn new things about programming. This website is where I share my projects, experiences, and thoughts on the field.</p>
+                <p>You can find my programming projects on this website. I hope you find my website helpful and interesting. Please reach out to me if you have any questions or comments.</p>
+            </div>
+
+        </div>
+        <div class="arrow-icon">
+            <a href="{% url 'resum' %}" class="transition">
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+</body>
+{% endblock aboutme %}

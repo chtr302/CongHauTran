@@ -1,0 +1,111 @@
+.reactangle-rs .grid-3 {
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+    width: 260px;
+    height: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+    margin-top: 40px;
+}
+.grid-3:hover {
+    background-color: #274c7734;
+    color:  white;
+    height: 380px;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.grid-3 h2 {
+    padding: 3px 10px;
+    font-size: 23px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+}
+.grid-3 .blob {
+    height: 30px;
+    width: 75%;
+    border-radius: 0 0 30px 30px;
+    margin: 0 auto;
+    background-color: #274c77;
+    box-shadow: 0 0 10px 1px #274c77;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.grid-3:hover .blob {
+    height: 0;
+}
+.grid-3:hover .blob a {
+    opacity: 0;
+    position: absolute;
+    transition: all 0s;
+}
+.grid-3 .img {
+    display: inline-block;
+    margin: 30px auto 10px auto;
+    width: 100px;
+    height: 100px;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.grid-3 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.skill {
+    width: 1px;
+    height: auto;
+    background-color: #ddd;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.dot-container {
+    display: flex;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff00;
+    border: 3px solid #b32d2d;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: -7px;
+}
+.dot-container h5 {
+    font-size: 12px;
+    white-space: nowrap;
+    margin-left:  15px;
+}
+
+/* Button */
+
+.grid-3 button {
+    width: 200px;
+    height: 60px;
+    border: 3px solid white;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.411);
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+    font-size: 16x;
+    font-weight: 550;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: none;
+    color: black;
+}
+  
+.grid-3 button:hover {
+    background: white;
+    color: black;
+    font-size: 16px;
+  }

@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Công Hậu</title>
+    <link rel="icon" href="{% static 'img/Logo.png' %}">
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'app/css/index.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container-navbar">
+        <div class="logo-tch">
+            <h3><a href="{% url "home" %}">Trần Công Hậu</a></h3>
+        </div>
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav_li {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                    <a class="nav-a" href="{% url "home" %}">Home</a>
+                </li>
+                <li class="nav_li {% if request.resolver_match.url_name == 'resum' %}active{% endif %}">
+                    <a class="nav-a" href="{% url "resum" %}">Resume</a>
+                </li>
+                <li class="nav_li {% if request.path|slice:':8' == '/project' %}active{% endif %}">
+                    <a class="nav-a" href="{% url "project" %}">Portfolio</a>
+                </li>
+                <li class="nav_li {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                    <a class="nav-a" href="{% url "contact" %}">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Content  -->
+    {% block aboutme %}{% endblock aboutme %}
+    {% block resum %}{% endblock resum %}
+    {% block project %}{% endblock project %}
+    {% block project_python %}{% endblock project_python %}
+    {% block detail %}{% endblock detail %}
+    {% block contact %}{% endblock contact %}
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{% static 'app/js/home.js' %}"></script>
+</body>
+</html>
