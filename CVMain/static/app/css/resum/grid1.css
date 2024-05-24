@@ -23,6 +23,7 @@ body {
     text-align: center;
     transition: all 0.5s;
     margin-top: 40px;
+    transform: scale(1);
 }
 .grid-1:hover {
     box-shadow: 0 0 10px 1px rgb(255, 255, 255);
@@ -30,7 +31,7 @@ body {
     color:  white;
     height: 440px;
     visibility: visible;
-    transform: scale(1);
+    transform: scale(1.2);
     transition: all 0.3s;
 }
 .grid-1 h2 {
@@ -122,6 +123,7 @@ body {
     text-decoration: none;
     border-radius: 10px;
     transition: transform 1s ease;
+    
 }
 .social-button:hover {
     transform: scale(1.2) rotate(360deg);

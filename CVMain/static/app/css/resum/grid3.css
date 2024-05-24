@@ -7,6 +7,7 @@
     text-align: center;
     transition: all 0.5s;
     margin-top: 40px;
+    transform: scale(1);
 }
 .grid-3:hover {
     background-color: #274c7734;
@@ -14,6 +15,7 @@
     height: 380px;
     visibility: visible;
     transition: all 0.3s;
+    transform: scale(1.2);
 }
 .grid-3 h2 {
     padding: 3px 10px;
